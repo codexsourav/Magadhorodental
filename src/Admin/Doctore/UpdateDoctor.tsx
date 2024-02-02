@@ -31,6 +31,11 @@ function UpdateDoctor() {
   const [fb, setFb] = useState("");
   const [insta, setInsta] = useState("");
   const [twitter, setTwitter] = useState("");
+
+  const [google, setGoogle] = useState("")
+  const [youtube, setYoutube] = useState("")
+
+
   // Handle submit function
   const handleSubmit = async () => {
     // Basic validation
@@ -63,6 +68,14 @@ function UpdateDoctor() {
       toast.error('Education Info is required');
       return;
     }
+    if (!google.trim()) {
+      toast.error('Enter Google Link or Add #');
+      return;
+    }
+    if (!youtube.trim()) {
+      toast.error('Enter Youtube Link or Add #');
+      return;
+    }
     await saveData();
 
   };
@@ -82,6 +95,8 @@ function UpdateDoctor() {
           fb,
           insta,
           twitter,
+          google,
+          youtube
         }
       }
       const responseData: AxiosResponse = await makeRequest("/api/doctor/" + id, "PUT", data);
@@ -127,6 +142,8 @@ function UpdateDoctor() {
       setFb(data.links.fb);
       setInsta(data.links.insta);
       setTwitter(data.links.twitter);
+      setGoogle(data.links.google);
+      setYoutube(data.links.youtube);
     } catch (error) {
       setErrr(true);
     }
@@ -156,6 +173,10 @@ function UpdateDoctor() {
       <div className="mt-5 grid grid-cols-2 gap-6">
         <InputBox label="Position Name" value={position} onChange={(e) => setPosition(e.target.value)} />
         <InputBox label="Education Info" value={education} onChange={(e) => setEducation(e.target.value)} />
+      </div>
+      <div className="mt-5 grid grid-cols-2 gap-6">
+        <InputBox label="Google Link" value={google} onChange={(e) => setGoogle(e.target.value)} />
+        <InputBox label="Youtube Link" value={youtube} onChange={(e) => setYoutube(e.target.value)} />
       </div>
       <div className="mt-5 grid grid-cols-3 gap-6">
         <InputBox label="Facebook Link" value={fb} onChange={(e) => setFb(e.target.value)} />

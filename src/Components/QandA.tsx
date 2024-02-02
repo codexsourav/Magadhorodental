@@ -13,6 +13,7 @@ function QandA({ data }: { data: IFAQData[] }) {
                             key={"faq-" + i}
                             title={e.qus}
                             content={e.ans}
+                            isLast={(data.length - 1) == i}
                         />
                     })
                 }

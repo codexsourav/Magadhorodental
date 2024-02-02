@@ -3,6 +3,8 @@ import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { RiFacebookLine } from "react-icons/ri";
 import { IDoctorData } from "../types/DataInterface";
 import { apiUrl } from "../lib/makeApi";
+import { RiGoogleLine } from "react-icons/ri";
+import { TfiYoutube } from "react-icons/tfi";
 
 
 
@@ -45,10 +47,13 @@ function OurDoctorBox({ data }: { data: IDoctorData }) {
             <div className="flex flex-col gap-4 py-4 ">
                 <h1 className="font-bold capitalize  text-xl flex justify-center items-center text-center text-blue-950">{data.name}</h1>
                 <p className="text-center text-sm line-clamp-1">{data.position}</p>
-                <div className="flex justify-center items-center gap-6">
+                <div className="flex justify-center items-center gap-4">
                     <a href={data.links.fb} target="_blank" className="flex justify-center items-center w-8 h-8 "><RiFacebookLine className="text-blue-950" size={18} /></a>
                     <a href={data.links.insta} target="_blank" className="flex justify-center items-center w-8 h-8 "><FaInstagram className="text-blue-950" size={18} /></a>
                     <a href={data.links.twitter} target="_blank" className="flex justify-center items-center w-8 h-8 "><FaXTwitter className="text-blue-950" size={18} /></a>
+                    <a href={data.links.google} target="_blank" className="flex justify-center items-center w-8 h-8 "><RiGoogleLine className="text-blue-950" size={18} /></a>
+                    <a href={data.links.youtube} target="_blank" className="flex justify-center items-center w-8 h-8 "><TfiYoutube className="text-blue-950" size={18} /></a>
+
                 </div>
             </div>
         </div>

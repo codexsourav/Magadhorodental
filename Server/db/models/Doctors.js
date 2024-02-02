@@ -45,6 +45,14 @@ const doctorSchema = new mongoose.Schema({
         twitter: {
             type: String,
             required: true,
+        },
+        google: {
+            type: String,
+            required: true,
+        },
+        youtube: {
+            type: String,
+            required: true,
         }
     },
     date: {

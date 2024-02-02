@@ -14,6 +14,8 @@ export interface IDoctorData {
         fb: string;
         twitter: string;
         insta: string;
+        google: string;
+        youtube: string;
     }
 }
 

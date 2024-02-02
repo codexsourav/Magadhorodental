@@ -46,7 +46,7 @@ function ShowFaqs() {
     }
     return (
         <AdminWrapper>
-            <Link to="/admin/faq/add" className=" pb-5 block">Add New Service</Link>
+            <Link to="/admin/faq/add" className=" pb-5 block">Add New Faq</Link>
             {data == null ? <div className="flex justify-center items-center h-96 text-xl">
                 Loading Doctors....
             </div> : <div className="w-full">

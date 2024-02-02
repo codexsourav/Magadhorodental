@@ -1,7 +1,7 @@
 import axios, { AxiosResponse, Method } from "axios";
 import { keys } from "./keys";
 
-const apiUrl = "http://localhost:8080";
+const apiUrl = "https://magadhorodental.com";
 
 interface RequestOptions {
     method: Method;

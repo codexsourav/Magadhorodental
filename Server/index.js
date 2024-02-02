@@ -11,6 +11,7 @@ import authMiddleware from './middelware/authAdmin.js';
 import cors from 'cors';
 import path from 'path';
 import { userRouters } from './routes/userRoutes.js';
+import { faqRouters } from './routes/faqRoutes.js';
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 const clint_path = path.join(__dirname, "../dist");
 const app = express();
@@ -27,7 +28,8 @@ app.use(
     videosRouters,
     blogsRouters,
     contactRouter,
-    userRouters
+    userRouters,
+    faqRouters,
 );
 
 app.post("/api/upload", authMiddleware, uploader.single("file"), async (req, res) => {

@@ -20,6 +20,8 @@ function Home() {
 
         try {
             const responaseData = await makeRequest("/api/home", "GET");
+            console.log(responaseData.data);
+
             setData(responaseData.data);
         } catch (error) {
             console.log(error);
@@ -34,6 +36,7 @@ function Home() {
     if (data == null) {
         return <Loader />;
     }
+    // console.log(data);
 
     return (
         <UserWrapper>
@@ -43,7 +46,7 @@ function Home() {
             <AboutUs />
             {data.videos.length == 0 ? null : <WatchVideos data={data.videos} />}
             {data.blogs.length == 0 ? null : <LatestBlogs data={data.blogs} />}
-            <QandA />
+            {data.faqs.length == 0 ? null : <QandA data={data.faqs} />}
         </UserWrapper>
     )
 }

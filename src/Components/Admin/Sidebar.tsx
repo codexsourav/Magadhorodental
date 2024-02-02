@@ -19,17 +19,22 @@ const Sidebar = () => {
           </li>
           <li className="border-b-2  w-full ">
             <Link to="/admin/services" className="text-white hover:bg-blue-700 w-full block bg-blue-900 p-3">
-              Services
+              Manage Services
             </Link>
           </li>
           <li className="border-b-2  w-full ">
             <Link to="/admin/videos" className="text-white hover:bg-blue-700 w-full block bg-blue-900 p-3">
-              Videos
+              Manage  Videos
             </Link>
           </li>
           <li className="border-b-2  w-full ">
             <Link to="/admin/blogs" className="text-white hover:bg-blue-700 w-full block bg-blue-900 p-3">
               Blogs
+            </Link>
+          </li>
+          <li className="border-b-2  w-full ">
+            <Link to="/admin/faqs" className="text-white hover:bg-blue-700 w-full block bg-blue-900 p-3">
+              Manage  Faqs
             </Link>
           </li>
           <li className="border-b-2  w-full ">

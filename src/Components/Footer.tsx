@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
                   <a href="https://maps.google.com/maps?ll=25.59082,85.159947&z=14&t=m&hl=en&gl=IN&mapclient=embed&cid=5197026168119514541" target='_blank' className="hover:underline">Branch 1 - K-108, Hanuman Nagar Rd, Kankarbagh, Hanuman Nagar, Patna, Bihar 800020</a>
                 </li>
                 <li>
-                  <a href="https://maps.google.com/maps?ll=25.581802,85.155773&z=14&t=m&hl=en&gl=IN&mapclient=embed&cid=10501768072403401777" target='_blank' className="hover:underline">Branch 2 - K-108, Hanuman Nagar Rd, Kankarbagh, Hanuman Nagar, Patna, Bihar 800020</a>
+                  <a href="https://www.google.com/maps?ll=25.581802,85.155773&z=14&t=m&hl=en&gl=IN&mapclient=embed&cid=10501768072403401777" target='_blank' className="hover:underline">Branch 2 - Flat No. 101, Mateshwari Residency, Patna Central School Rd, Ramkrishan Nagar, Patna, Bihar 800027</a>
                 </li>
               </ul>
             </div>

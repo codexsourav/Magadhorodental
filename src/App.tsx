@@ -21,6 +21,9 @@ import Contact from "./Admin/Contact/Contact";
 import WatchVideos from "./pages/WatchVideos";
 import Blogs from "./pages/Blogs";
 import ReadBlog from "./pages/blog/ReadBlog";
+import ShowFaqs from "./Admin/Faqs/ShowFaqs";
+import UpdateFaq from "./Admin/Faqs/UpdateFaq";
+import NewFaq from "./Admin/Faqs/NewFaq";
 
 function App() {
   return (
@@ -52,6 +55,10 @@ function App() {
         <Route path="/admin/blogs" Component={ShowBlogs} />
         <Route path="/admin/blog/add" Component={NewBlogs} />
         <Route path="/admin/blog/:id" Component={UpdateBlogs} />
+
+        <Route path="/admin/faqs" Component={ShowFaqs} />
+        <Route path="/admin/faq/add" Component={NewFaq} />
+        <Route path="/admin/faq/:id" Component={UpdateFaq} />
 
         <Route path="/admin/contacts" Component={Contact} />
 

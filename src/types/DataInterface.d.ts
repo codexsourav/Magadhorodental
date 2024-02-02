@@ -62,4 +62,14 @@ export interface IHomeData {
     doctors: IDoctorData[];
     videos: IVideoData[];
     blogs: IBlogData[];
+    faqs: IFAQData[];
+}
+
+export interface IFAQData {
+    _id?: string;
+    _v?: string;
+    qus: string;
+    ans: string;
+    slug?: string;
+    date?: string;
 }

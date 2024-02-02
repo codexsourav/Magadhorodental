@@ -7,6 +7,7 @@ import { Doctors } from '../db/models/Doctors.js';
 import { Services } from '../db/models/Services.js';
 import { Videos } from '../db/models/Videos.js';
 import { Contacts } from '../db/models/Contacts.js';
+import { Faqs } from '../db/models/Faqs.js';
 
 /**
  * @param {import('express').Request} req
@@ -41,8 +42,10 @@ export const dashBordData = async (req, res) => {
         const tservices = await Services.find();
         const videosd = await Videos.find();
         const Contactsd = await Contacts.find();
+        const faqs = await Faqs.find();
 
-        return res.status(ServerStatus.SUCCESS).send({ users: user.length, blogs: posts.length, doctors: doctores.length, services: tservices.length, videos: videosd.length, conatcts: Contactsd.length });
+
+        return res.status(ServerStatus.SUCCESS).send({ users: user.length, blogs: posts.length, doctors: doctores.length, services: tservices.length, videos: videosd.length, conatcts: Contactsd.length, faqs: faqs.length });
 
     } catch (error) {
         console.log(error);

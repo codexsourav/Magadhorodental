@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from '../../Components/Admin/Button';
 import InputBox, { TextArea } from '../../Components/Admin/InputBox';
 import { AdminWrapper } from '../../Wrapper/AdminWrapper';

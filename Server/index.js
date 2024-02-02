@@ -39,7 +39,7 @@ app.get("/*", async (req, res) => {
 });
 
 connectDataBase().then(() => {
-    app.listen(8080, () => {
-        console.log('Server Start On Port 8080');
+    app.listen(4002, () => {
+        console.log('Server Start On Port 4002');
     });
 }).catch((e) => console.log(e),);
